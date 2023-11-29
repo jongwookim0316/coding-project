@@ -46,14 +46,18 @@ def result1(input, ball, strike):       #입력값, ball,strike 를 매개변수
             st.session_state.record[i].append(input)    #입력값
             st.session_state.record[i].append(ball)     #볼
             st.session_state.record[i].append(strike)   #스트라이크
-            st.write(i + 1, '회 입력숫자: ', st.session_state.record[i][1], st.session_state.record[i][2],' ball ', st.session_state.record[i][3], ' strike ')  #각 회차마다의 기록을 저장하여 출력
+
+            #각 회차마다의 기록을 저장하여 출력
+            st.write(i + 1, '회 입력숫자: ', st.session_state.record[i][1], st.session_state.record[i][2],' ball ', st.session_state.record[i][3], ' strike ')  
+            
 
 def result2(input, ball, strike):                       #입력값, ball,strike 를 매개변수로 넘겨받음
     if strike == 4:
         st.write('# Victory')                           #strike가 4 == 승리
     elif st.session_state.inning >= 15:
         st.write('# Gameover')                          #시도횟수가 15회 제한
-        st.write('정답은 ', str(st.session_state.randnums[0]) + str(st.session_state.randnums[1]) + str(st.session_state.randnums[2]), ' 입니다.')  #정답출력
+        st.write('정답은 ', str(st.session_state.randnums[0]) + str(st.session_state.randnums[1]) + str(st.session_state.randnums[2])
+                 +str(st.session_state.randnums[3]), ' 입니다.')  #정답출력
         st.write('새로운 게임을 하시려면 F5를 눌러주세요.')
 
     else:
@@ -63,14 +67,17 @@ def result2(input, ball, strike):                       #입력값, ball,strike 
             st.session_state.record[i].append(input)    #입력값
             st.session_state.record[i].append(ball)     #볼
             st.session_state.record[i].append(strike)   #스트라이크
-            st.write(i + 1, '회 입력숫자: ', st.session_state.record[i][1], st.session_state.record[i][2],' ball ', st.session_state.record[i][3], ' strike ')  #각 회차마다의 기록을 저장하여 출력
+
+            #각 회차마다의 기록을 저장하여 출력
+            st.write(i + 1, '회 입력숫자: ', st.session_state.record[i][1], st.session_state.record[i][2],' ball ', st.session_state.record[i][3], ' strike ')  
 
 def result3(input, ball, strike):                       #입력값, ball,strike 를 매개변수로 넘겨받음
     if strike == 5:
         st.write('# Victory')                           #strike가 5 == 승리
     elif st.session_state.inning >= 15:
         st.write('# Gameover')                          #시도횟수가 15회 제한
-        st.write('정답은 ', str(st.session_state.randnums[0]) + str(st.session_state.randnums[1]) + str(st.session_state.randnums[2]), ' 입니다.')  #정답출력
+        st.write('정답은 ', str(st.session_state.randnums[0]) + str(st.session_state.randnums[1]) + str(st.session_state.randnums[2])
+                 +str(st.session_state.randnums[3])+str(st.session_state.randnums[4]), ' 입니다.')  #정답출력
         st.write('새로운 게임을 하시려면 F5를 눌러주세요.')
 
     else:
@@ -80,9 +87,11 @@ def result3(input, ball, strike):                       #입력값, ball,strike 
             st.session_state.record[i].append(input)    #입력값
             st.session_state.record[i].append(ball)     #볼
             st.session_state.record[i].append(strike)   #스트라이크
-            st.write(i + 1, '회 입력숫자: ', st.session_state.record[i][1], st.session_state.record[i][2],' ball ', st.session_state.record[i][3], ' strike ')  #각 회차마다의 기록을 저장하여 출력
 
-######################################################################################################################################################################
+            #각 회차마다의 기록을 저장하여 출력
+            st.write(i + 1, '회 입력숫자: ', st.session_state.record[i][1], st.session_state.record[i][2],' ball ', st.session_state.record[i][3], ' strike ')  
+
+#####################################################################################################################################################################
 
 # 입력 받은 값을 매개변수로 하여 검증 함수
 
@@ -128,7 +137,7 @@ def verify_digit3(input):
 
     result3(input, ball, strike)
     
-##############################################################################################################################################################
+###################################################################################################################################################################
 
 # <게임시작>
 
